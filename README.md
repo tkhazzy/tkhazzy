@@ -1,16 +1,17 @@
-## Hi there 👋
+# 👋 Hi, I'm Hazel Takomborerwa Mustikiwa
 
-<!--
-**tkhazzy/tkhazzy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓  MSBA student passionate about solving real-world problems with data.  
+🔍 Exploring the intersection of **machine learning &AI**, **data engineering**, and **data visualization**.  
+📈 Interested in building impactful analytics and predictive systems.  
 
-Here are some ideas to get you started:
+## 🔧 Tools and Technologies
+- **Languages**: Python, R, SQL
+- **Libraries/Frameworks**: pandas, numpy, scikit-learn, TensorFlow
+- **Tools**: Git, Docker, Tableau,AWS
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🌟 Projects
+
+
+## 📫 Connect with me!
+- [LinkedIn](https://www.linkedin.com/in/hazeltako/)
+- [Email](takomutsikiwa@gmail.com)
