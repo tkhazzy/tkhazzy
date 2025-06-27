@@ -1,15 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Hazel Mutsikiwa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazel Mutsikiwa | Data Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Dark Mode */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .section {
+            scroll-margin-top: 64px; /* Adjust for sticky header height */
+        }
+        /* Typewriter effect */
+        .typewriter-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: #3b82f6; /* blue-500 */
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        /* Scroll-triggered animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link.active {
+            color: #3b82f6; /* blue-500 */
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-     <h1>My name is Hazel Mutsikiwa </h1>
-     <p>
+<body class="antialiased">
 
-        I am an Emory Alumni
-     </p>
+    <!-- Header -->
+    <header id="header" class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 shadow-md shadow-slate-900/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="text-2xl font-bold text-slate-100">Hazel Mutsikiwa</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link text-slate-300 hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#experience" class="nav-link text-slate-300 hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400 transition-colors">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-slate-200 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                 <a href="#about" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-blue-400">About</a>
+                 <a href="#skills" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-blue-400">Skills</a>
+                 <a href="#projects" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-blue-400">Projects</a>
+                 <a href="#experience" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-blue-400">Experience</a>
+                 <a href="#contact" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section min-h-[calc(100vh-64px)] flex items-center bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-100 mb-4">Transforming Data into Insights</h1>
+                <p class="text-xl md:text-2xl text-slate-400 mb-8">
+                    I am a <span id="typewriter" class="font-semibold text-blue-400"></span><span class="typewriter-cursor"></span>
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-600/20">View My Work</a>
+                    <a href="#contact" class="bg-slate-700 text-slate-100 font-semibold px-8 py-3 rounded-lg hover:bg-slate-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-slate-700/20">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section py-20 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3 text-center">
+                        <img src="https://placehold.co/400x400/1E293B/94A3B8?text=Alex" alt="Alex Doe" class="rounded-full w-64 h-64 mx-auto shadow-xl shadow-slate-900/60">
+                    </div>
+                    <div class="md:w-2/3 text-lg text-slate-300 space-y-4">
+                        <p>Hello! I'm Hazel Mutsikiwa, a passionate and detail-oriented data professional with a knack for uncovering hidden patterns and telling stories with data. My journey into the world of data was driven by a deep curiosity about how we can use information to make smarter, more impactful decisions.</p>
+                        <p>With a strong foundation in statistical analysis, machine learning, and data visualization, I specialize in translating complex datasets into actionable strategies. Whether it's building predictive models, designing insightful dashboards, or conducting in-depth market analysis, my goal is always to drive business growth and solve real-world problems.</p>
+                         <p>When I'm not wrangling data, you can find me exploring experimenting with new recipes in the kitchen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section py-20 bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">Technical Skills</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+                    <!-- Skill items with dark mode styling -->
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-database text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">SQL</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fab fa-python text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Python</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fab fa-r-project text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">R</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-chart-bar text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Tableau</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-chart-line text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Power BI</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-file-excel text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Excel</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-cogs text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">ETL</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-brain text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">ML Models</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fas fa-cloud text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Cloud (AWS/GCP)</h3>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all">
+                        <i class="fab fa-git-alt text-4xl text-blue-400 mb-3"></i>
+                        <h3 class="text-lg font-semibold text-slate-200">Git & GitHub</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section py-20 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">Featured Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-slate-900 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-slate-700 hover:border-blue-500">
+                        <img src="https://placehold.co/600x400/3B82F6/0F172A?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-slate-100">Customer Churn Prediction</h3>
+                            <p class="text-slate-400 mb-4">Developed a machine learning model to predict customer churn with 92% accuracy, helping to inform retention strategies.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-blue-400">Python, Scikit-learn</span>
+                                <a href="#" class="text-slate-400 hover:text-blue-400"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-slate-900 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-slate-700 hover:border-emerald-500">
+                        <img src="https://placehold.co/600x400/10B981/0F172A?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-slate-100">Sales Performance Dashboard</h3>
+                            <p class="text-slate-400 mb-4">Designed an interactive Tableau dashboard to track KPIs, identify trends, and monitor sales performance across regions.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-emerald-400">Tableau, SQL</span>
+                                <a href="#" class="text-slate-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-slate-900 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-slate-700 hover:border-orange-500">
+                        <img src="hazel.jpeg" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-slate-100">Market Basket Analysis</h3>
+                            <p class="text-slate-400 mb-4">Utilized R to perform market basket analysis on retail data, uncovering product associations to optimize store layouts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-orange-400">R, Apriori Algorithm</span>
+                                <a href="#" class="text-slate-400 hover:text-orange-400"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section py-20 bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-slate-100">Professional Experience</h2>
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="absolute left-1/2 w-0.5 h-full bg-slate-700 -translate-x-1/2"></div>
+                    <!-- Experience Item 1 -->
+                    <div class="relative mb-8">
+                        <div class="absolute w-4 h-4 bg-blue-500 rounded-full mt-1.5 -left-[7px] border-4 border-slate-900"></div>
+                        <div class="ml-8 md:ml-0 md:pl-8 md:w-1/2 md:text-right">
+                             <p class="text-sm text-slate-400">June 2022 - Present</p>
+                            <h3 class="text-xl font-semibold text-slate-100">Data Analyst</h3>
+                            <p class="text-md text-slate-300">Tech Solutions Inc.</p>
+                        </div>
+                    </div>
+                    <!-- Experience Item 2 -->
+                    <div class="relative mb-8">
+                        <div class="absolute w-4 h-4 bg-blue-500 rounded-full mt-1.5 left-1/2 -translate-x-1/2 border-4 border-slate-900"></div>
+                        <div class="ml-8 md:ml-0 md:pl-8 md:w-1/2 md:left-1/2">
+                            <p class="text-sm text-slate-400">Jan 2021 - May 2022</p>
+                            <h3 class="text-xl font-semibold text-slate-100">Junior Business Analyst</h3>
+                            <p class="text-md text-slate-300">Data Corp.</p>
+                        </div>
+                    </div>
+                    <!-- Experience Item 3 -->
+                    <div class="relative">
+                         <div class="absolute w-4 h-4 bg-blue-500 rounded-full mt-1.5 -left-[7px] border-4 border-slate-900"></div>
+                        <div class="ml-8 md:ml-0 md:pl-8 md:w-1/2 md:text-right">
+                             <p class="text-sm text-slate-400">May 2020 - Dec 2020</p>
+                            <h3 class="text-xl font-semibold text-slate-100">Data Science Intern</h3>
+                            <p class="text-md text-slate-300">Innovate Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section py-20 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-slate-100">Get In Touch</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to connect, feel free to reach out!</p>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="mailto:alex.doe@example.com" class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-600/30 text-lg inline-block">
+                        Say Hello
+                    </a>
+                </div>
+                 <div class="mt-12 flex justify-center space-x-8">
+                    <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            &copy; 2024 Hazel Mutsikiwa. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Typewriter effect
+            const typewriterElement = document.getElementById('typewriter');
+            const roles = ['Data Analyst', 'Business Analyst', 'Data Scientist'];
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentRole = roles[roleIndex];
+                if (isDeleting) {
+                    typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentRole.length) {
+                    setTimeout(() => isDeleting = true, 2000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+
+                const typeSpeed = isDeleting ? 100 : 200;
+                setTimeout(type, typeSpeed);
+            }
+            type();
+
+            // Scroll-triggered animations
+            const faders = document.querySelectorAll('.fade-in-up');
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+            const faderObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            faders.forEach(fader => {
+                faderObserver.observe(fader);
+            });
+
+            // Active nav link highlighting on scroll
+            const sections = document.querySelectorAll('section.section');
+            const navLinks = document.querySelectorAll('header nav a.nav-link');
+            const mobileLinks = document.querySelectorAll('#mobile-menu a.nav-link');
+
+            const activateNavLink = () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if(pageYOffset >= sectionTop - 70) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href').includes(current)){
+                        link.classList.add('active');
+                    }
+                });
+
+                 mobileLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href').includes(current)){
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', activateNavLink);
+            activateNavLink(); // Initial call
+
+        });
+    </script>
 </body>
 </html>
